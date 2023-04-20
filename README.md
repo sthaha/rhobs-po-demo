@@ -1,13 +1,22 @@
 
 # Running
 
+```
+./demo.sh
+```
+
+
+
 Ref: https://prometheus-operator.dev/docs/user-guides/getting-started/
 
-* Create the namespace opo-demo
-* Create the example app
-* Deploy Prometheus
-* Let it run and then 
+* Install rhobs PO operator from custom OLM catalog
+* Create the namespace  - rhobs-po-demo
+* Install the example app
+* Deploys Prometheus that monitors the example app
+* Port forwards prometheus, so that you can play with the UI
+
+## TIPS:
 
 ```sh
-	oc port-forward sts/prometheus-prometheus -n opo-demo 9090:9090 --address 0.0.0.0
+	oc port-forward sts/prometheus-rhobs-prom -n rhobs-po-demo 9090:9090 --address 0.0.0.0
 ```
