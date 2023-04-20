@@ -1,4 +1,6 @@
 apiVersion: monitoring.rhobs/v1
+# NOTE:               ☝️ ☝️ ☝️ rhobs and not .coreos.com
+
 kind: ServiceMonitor
 metadata:
   name: example-app

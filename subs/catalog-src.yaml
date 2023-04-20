@@ -1,0 +1,19 @@
+# Apply this to add a new catalog to OLM
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  annotations:
+  name: rhobs-prometheus-operator
+  namespace: openshift-marketplace
+spec:
+  displayName: RHOBS Prometheus Operator - Test
+  icon:
+    base64data: ""
+    mediatype: ""
+  image: quay.io/sthaha/rhobs-prometheus-operator-catalog:latest
+  publisher: Sunil Thaha
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 1m0s

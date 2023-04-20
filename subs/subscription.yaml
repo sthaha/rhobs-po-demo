@@ -1,0 +1,12 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: rhobs-prometheus-operator
+  namespace: openshift-operators
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: rhobs-prometheus-operator
+  source: rhobs-prometheus-operator
+  sourceNamespace: openshift-marketplace
+  startingCSV: rhobs-prometheus-operator.v0.64.0-rhobs1

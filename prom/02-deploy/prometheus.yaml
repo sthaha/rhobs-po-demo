@@ -1,9 +1,12 @@
 apiVersion: monitoring.rhobs/v1
+# NOTE:               ☝️ ☝️ ☝️ rhobs and not .coreos.com
+
 kind: Prometheus
 metadata:
-  name: prometheus
+  name: rhobs-prom
 spec:
-  serviceAccountName: prometheus
+  serviceAccountName: rhobs-prometheus # 👈 same prometheus SA as in CRB
+
   serviceMonitorSelector:
     matchLabels:
       team: frontend
