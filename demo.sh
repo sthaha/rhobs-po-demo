@@ -300,7 +300,7 @@ step_999_thank_you() {
 main() {
 	export KUBECONFIG=${KUBECONFIG:-~/.kube/cluster/obo}
 
-	fns=($(declare -F | awk '{ print $3 }' | sort | grep step_ | grep -v _skip))
+	fns=($(declare -F | awk '{ print $3 }' | sort | grep '^step_' | grep -v _skip))
 
 	for x in ${fns[@]}; do
 		$x
