@@ -148,7 +148,7 @@ prometheus_status() {
 		-o jsonpath='{.status.conditions}' | jq -C .
 }
 
-step_000_set_context() {
+xstep_000_set_context() {
 	header "✨ 0b0 ✨ -< RHOBS Prometheus Operator 🔱 >- ✨ 0b0 ✨ "
 	echo "  ✶ Deploy RHOBS PO Operator fork 🔱"
 	echo "  ✶ Deploy appliction"
@@ -157,7 +157,7 @@ step_000_set_context() {
 	wait_for_key
 }
 
-step_110_deploy_rhobs_po() {
+xstep_110_deploy_rhobs_po() {
 	header "Deploy RHOBS Prometheus Operator"
 
 	apply "catalog-source" subs/catalog-src.yaml
